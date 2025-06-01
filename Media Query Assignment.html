@@ -1,0 +1,304 @@
+<!-- Task 1. Create a simple webpage with a header, a main content section, and a footer. Apply a media query that changes the background color of the header to blue when the screen width is less than 600px. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            height: 100px;
+            background-color: #f5f5f5;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            margin: 20px 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Responsive Header</h1>
+    </header>
+    <main>Main Content</main>
+    <footer>Footer</footer>
+</body>
+
+</html>
+
+
+<!-- Task 2. Create an image gallery with three images in a row. Use media queries to adjust the layout to two images in arow for screens smaller than 800px and one image in a row for screens smaller than 500px. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_2</title>
+    <style>
+        .item {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 90vh;
+            justify-items: center;
+            align-items: center;
+            gap: 0;
+        }
+
+        @media screen and (max-width:800px) {
+            .item {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .item {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <div><img
+                src="https://fastly.picsum.photos/id/100/200/300.jpg?hmac=MeTp97vw7VNDswRcCqUFkGNC8ILDvNfI4MRoHFyGcQ8">
+        </div>
+        <div><img
+                src="https://fastly.picsum.photos/id/100/200/300.jpg?hmac=MeTp97vw7VNDswRcCqUFkGNC8ILDvNfI4MRoHFyGcQ8">
+        </div>
+        <div><img
+                src="https://fastly.picsum.photos/id/100/200/300.jpg?hmac=MeTp97vw7VNDswRcCqUFkGNC8ILDvNfI4MRoHFyGcQ8">
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+<!-- Task 3. Create a navigation bar with five links. Apply a media query that converts the navigation into a vertical list for screens smaller than 768px and also changes the background color to gray. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        nav{
+            display: flex;
+            height: 90vh;
+            width: 100vw;
+
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            height: 60px;
+            width: 100vw;
+            margin: 10px 5px 0;
+            background-color: black;
+            /* justify-content: center; */
+            align-items: center;
+            list-style-type: none;
+            
+        }
+        ul li {
+            margin: 10px auto;
+            color: white;
+            
+        }
+        @media screen and (max-width: 768px){
+            ul{
+                flex-direction: column;
+                height: 200px;
+                flex-wrap: wrap;
+                background-color: grey;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Sevices</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+
+<!-- Task 4. Create a grid based layout containing four grid items which arranges them as the screen size changes -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .container{
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+        .container div{
+            /* border: 2px solid black; */
+            height: 120px;
+            margin: 10px 10px;
+            text-align: center;
+            padding-top: 15px;
+            color: white;
+            font-size: 20px;
+        }
+        .Box1{
+            background-color: red;
+        }
+        .Box2{
+            background-color: green;
+        }
+        .Box3{
+            background-color: blue;
+        }
+        .Box4{
+            background-color: orangered;
+        }
+        @media screen and (max-width: 490px){
+            .container{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Box1">Box 1</div>
+        <div class="Box2">Box 2</div>
+        <div class="Box3">Box 3</div>
+        <div class="Box4">Box 4</div>
+    </div>
+</body>
+</html>
+
+
+<!-- Task 5. Create the below given layout using the flexbox in css, which should adapt itself on mobile screen as per given below output. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 8fr 1fr;
+        }
+
+        .container div {
+            text-align: center;
+            padding-top: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .Box1 {
+            background-color: #161616c7;
+            height: 95vh;
+            grid-row: 1/3;
+        }
+
+        .Box2 {
+            background-color: #66cc99;
+        }
+
+        .Box3 {
+            background-color: rgb(244, 151, 51);
+            grid-area: 2/2;
+        }
+
+        .Box4 {
+            background-color: #161616c7;
+            grid-row: 1/3;
+        }
+
+        @media screen and (max-width: 518px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            .Box1,
+            .Box2,
+            .Box3,
+            .Box4 {
+                height: 30px !important;
+
+            }
+
+            .Box4 {
+                margin-top: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Box1">Box 1</div>
+        <div class="Box2">Box 2</div>
+        <div class="Box3">Box 3</div>
+        <div class="Box4">Box 4</div>
+    </div>
+</body>
+
+</html>
+
+
+---------------------------------------------END--------------------------------------------------
