@@ -1,0 +1,49 @@
+<!-- Task 2. Create an image gallery with three images in a row. Use media queries to adjust the layout to two images in arow for screens smaller than 800px and one image in a row for screens smaller than 500px. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_2</title>
+    <style>
+        .item {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 90vh;
+            justify-items: center;
+            align-items: center;
+            gap: 0;
+        }
+
+        @media screen and (max-width:800px) {
+            .item {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .item {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <div><img
+                src="https://fastly.picsum.photos/id/100/200/300.jpg?hmac=MeTp97vw7VNDswRcCqUFkGNC8ILDvNfI4MRoHFyGcQ8">
+        </div>
+        <div><img
+                src="https://fastly.picsum.photos/id/100/200/300.jpg?hmac=MeTp97vw7VNDswRcCqUFkGNC8ILDvNfI4MRoHFyGcQ8">
+        </div>
+        <div><img
+                src="https://fastly.picsum.photos/id/100/200/300.jpg?hmac=MeTp97vw7VNDswRcCqUFkGNC8ILDvNfI4MRoHFyGcQ8">
+        </div>
+
+    </div>
+</body>
+
+</html>
